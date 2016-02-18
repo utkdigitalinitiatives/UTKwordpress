@@ -1,0 +1,297 @@
+//
+// Type Options
+// --------------------------------------------------
+
+
+body {
+
+  // Sans Serif By Default. But if you choose Serif in the options, then this takes over.
+  &.serif {
+    font-family: $font-family-serif;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $font-family-serif;
+    }
+  }
+  &.mixedserif {
+    font-family: $font-family-serif;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $font-family-sans-serif;
+    }
+  }
+
+
+
+  // White header By Default. But if you choose Orange in the options, then this takes over.
+  &.orange {
+    @media (min-width: $screen-md) {
+      background: $utorange;
+    }
+    #linkdrawer {
+      border-top: 3px solid $utorange;
+    }
+  }
+
+
+  // White header By Default. But if you choose Smokey in the options, then this takes over.
+  &.smokey {
+    @media (min-width: $screen-md) {
+      background: $utsmokey;
+   }
+    #linkdrawer {
+      border-top: 4px solid $utsmokey;
+    }
+  }
+
+  // Valley Header.
+  &.valley {
+    @media (min-width: $screen-md) {
+      background: $utvalley;
+    }
+    #linkdrawer {
+      border-top: 3px solid $utvalley;
+    }
+/*
+    .entry-content {
+      a {
+        color: $utvalley;
+      }
+    }
+*/
+  }
+
+  // Torch Header.
+  &.torch {
+    @media (min-width: $screen-md) {
+      background: $uttorch;
+    }
+    #linkdrawer {
+      border-top: 3px solid $uttorch;
+    }
+/*
+    .entry-content {
+      a {
+        color: $uttorch;
+      }
+    }
+*/
+  }
+
+  // Globe Header.
+  &.globe {
+    @media (min-width: $screen-md) {
+      background: $utglobe;
+    }
+     #linkdrawer {
+      border-top: 3px solid $utglobe;
+    }
+/*
+    .entry-content {
+      a {
+        color: $utglobe;
+      }
+    }
+*/
+  }
+
+
+  // Limestone Header.
+  &.limestone {
+    @media (min-width: $screen-md) {
+      background: $utlimestone;
+    }
+/*
+    #expandedfooter {
+      border-color: $utlimestone;
+    }
+*/
+    #linkdrawer {
+      border-top: 3px solid $utlimestone;
+    }
+  }
+
+
+  // Sunsphere Header.
+  &.sunsphere {
+     @media (min-width: $screen-md) {
+      background: $utsunsphere;
+      }
+/*
+      #expandedfooter {
+        border-color: $utsunsphere;
+      }
+*/
+      #linkdrawer {
+        border-top: 3px solid $utsunsphere;
+      }
+
+  }
+  // River Header.
+  &.river {
+     @media (min-width: $screen-md) {
+      background: $utriver;
+      }
+/*
+      #expandedfooter {
+        border-color: $utriver;
+      }
+*/
+      #linkdrawer {
+        border-top: 3px solid $utriver;
+
+      }
+/*
+    .entry-content {
+      a {
+        color: $utriver;
+      }
+    }
+*/
+    }
+  // Leconte Header.
+  &.leconte {
+    @media (min-width: $screen-md) {
+      background: $utleconte;
+      }
+     #linkdrawer {
+        border-top: 3px solid $utleconte;
+      }
+/*
+    .entry-content {
+      a {
+        color: $utleconte;
+      }
+    }
+*/
+    }
+
+  // Rock Header.
+  &.rock {
+    @media (min-width: $screen-md) {
+    background: $utrock;
+    }
+       #linkdrawer {
+        border-top: 3px solid $utsmokey;
+      }
+      }
+
+  // Regalia Header.
+  &.regalia {
+    @media (min-width: $screen-md) {
+    background: $utregalia;
+    }
+       #linkdrawer {
+        border-top: 3px solid $utregalia;
+      }
+/*
+    .entry-content {
+      a {
+        color: $utregalia;
+      }
+    }
+*/
+    }
+
+  // Summitt Header.
+  &.summitt {
+    @media (min-width: $screen-md) {
+    background: $utsummitt;
+    }
+/*
+       #expandedfooter {
+        border-color: $utsummitt;
+      }
+*/
+      #linkdrawer {
+        border-top: 3px solid $utsummitt;
+      }
+    }
+
+
+  // Legacy Header.
+  &.legacy {
+    @media (min-width: $screen-md) {
+    background: $utlegacy;
+    }
+/*
+       #expandedfooter {
+        border-color: $utlegacy;
+      }
+*/
+      #linkdrawer {
+        border-top: 3px solid  $utlegacy;
+      }
+/*
+    .entry-content {
+      a {
+        color: $utlegacy;
+      }
+    }
+*/
+  }
+
+  // Buckskin Header.
+  &.buckskin {
+    @media (min-width: $screen-md) {
+      background: $utbuckskin;
+      }
+      #linkdrawer {
+        border-top: 3px solid $utbuckskin;
+      }
+  }
+
+
+  // Switchgrass Header.
+  &.switchgrass {
+    @media (min-width: $screen-md) {
+    background: $utswitchgrass;
+    }
+/*
+       #expandedfooter {
+        border-color: $utswitchgrass;
+      }
+*/
+      #linkdrawer {
+        border-top: 3px solid  $utswitchgrass;
+      }
+/*
+    .entry-content {
+      a {
+        color: $utswitchgrass;
+      }
+    }
+*/
+  }
+
+  // Eureka Header.
+  &.eureka {
+    @media (min-width: $screen-md) {
+    background: $uteureka;
+    }
+/*
+       #expandedfooter {
+        border-color: $uteureka;
+      }
+*/
+      #linkdrawer {
+        border-top: 4px solid  $uteureka;
+      }
+  }
+
+  // Energy Header.
+  &.energy {
+    @media (min-width: $screen-md) {
+    background: $utenergy;
+    }
+/*
+       #expandedfooter {
+        border-color: $utenergy;
+      }
+*/
+      #linkdrawer {
+        border-top: 4px solid  $utenergy;
+      }
+  }
+
+
+
+}

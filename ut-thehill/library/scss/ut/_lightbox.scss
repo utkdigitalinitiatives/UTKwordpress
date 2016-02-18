@@ -1,0 +1,89 @@
+/*
+.modal-backdrop.in {
+    -webkit-opacity: 0.95;
+    -moz-opacity: 0.95;
+    opacity: 0.95;
+    background-color: $utsmokey;
+}
+*/
+.ekko-lightbox  {
+  .modal-content {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+  }
+  .ekko-lightbox-container {
+    background: white;
+    padding: $font-size-small;
+    margin-top: $font-size-small;
+  }
+  .ekko-lightbox-nav-overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    a {
+      padding: 0 1em;
+      color: $white;
+      &.fa-chevron-right {
+        float: right;
+        margin-right: $font-size-large;
+      }
+    }
+  }
+  .modal-header {
+      border: 0;
+      padding: 0;
+      h4.modal-title {
+
+
+      }
+      .close {
+        color: $white;
+        text-shadow: 0;
+        margin-top: 5px;
+        font-weight: bold;
+        background: none;
+        border: 0;
+        float: left;
+        font-size: $font-size-large;
+        &:hover {
+            -webkit-opacity: 1;
+            -moz-opacity: 1;
+            opacity: 1;
+        }
+      }
+  }
+  .modal-content {
+    width: 80%;
+    margin: auto;
+  }
+  .modal-body {
+      padding: 0;
+      margin: 0 auto;
+  }
+  .modal-footer {
+      -webkit-opacity: 0.9;
+      -moz-opacity: 0.9;
+      opacity: 0.9;
+      border: 0;
+      color: #fff;
+      font-weight: 100;
+      padding: 0;
+  }
+
+}
+
+
+
+
+
+
+.ekko-lightbox-nav-overlay a {
+    -webkit-opacity: 0.9;
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+    text-shadow: none;
+}

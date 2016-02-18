@@ -1,0 +1,61 @@
+
+
+.flexible-content {
+  // Text Styles
+  //margin-top: $gutter-width;
+  h2.mod-text-title {
+    margin-left: $gutter-width;
+  }
+  
+// Quote Module
+  blockquote.quote {
+    text-align: center;
+    background: $utsmokey;
+    border: 0;
+    font-size: ($font-size-large * 1.25);
+    color: white;
+    .quote-author {
+      font-size: $font-size-large;
+      color: $uteureka;
+      font-style: italic;
+    }
+  }
+
+
+
+// Image Module
+  figure.image {
+  	height: auto;
+  	max-width: 110%;
+    @media screen and (min-width: $screen-sm) {
+      max-width: 110%;
+      margin-left: -($gutter-width * 2);
+      margin-right: -($gutter-width * 2);
+    }
+    @media screen and (min-width: $screen-md) {
+      margin-left: -($gutter-width * 2);
+      margin-right: -($gutter-width * 2);
+    }
+  }
+  
+  // Gallery Module
+  .mod-gallery {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    a {
+      padding: 0;
+      float: left;
+      @include grid-unit(4);
+      margin-bottom: ($gutter-width * 2);
+      @media screen and (min-width: $screen-md) {
+        @include grid-unit(2);
+      }
+    }
+  }
+    figcaption.lightbox-gallery {
+      width: 100%;
+      clear: both;
+    }
+}
+

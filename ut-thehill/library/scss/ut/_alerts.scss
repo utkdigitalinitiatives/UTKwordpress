@@ -1,0 +1,46 @@
+#utsafe {
+	padding: 0.75em 2em;
+	background: $uteureka;
+	&:before,
+	&:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+
+	&:after {
+	    clear: both;
+	}
+	.alert-icon {
+		width: 138px;
+		height: 125px;
+		background: url(images/interface/icon-alert.png) no-repeat center 9px;
+		background-size: 90px 90px; 
+		@media (min-width: $screen-sm) {
+			float: left;
+		  padding-right: 1%;
+		}
+		.fa {
+			font-size: 80px;
+		  line-height: 97px;
+		}
+	}
+	.message { 
+		@media (min-width: $screen-sm) {
+			float: left;
+		  padding-left: 1%;
+			border-left: 1px solid $utsmokey;
+		}
+		h1 {
+			margin:0.2em 0 0;
+		}
+		p{
+			margin: 0 0 0.2em;
+		}
+		.alertButton {
+			display: inline-block;
+		  background: $utsmokey;
+		  padding: 0.2em 0.5em;
+		  color: $uteureka;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+@mixin grid-unit($span) {
+	margin-right: $gutter-width;
+	margin-left: $gutter-width;
+	width: ($column-width * $span) + (($gutter-width * 2) * ($span - 1));
+}
+@mixin button-color($btn-color) {
+  background-color: $btn-color;
+  // border-color: darken($btn-color, 20%);
+  border: 0;
+  &:hover {
+  	background-color: darken($btn-color, 10%);
+  }
+}
+
+

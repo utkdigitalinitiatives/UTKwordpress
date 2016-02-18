@@ -1,0 +1,78 @@
+/*
+Theme Name: The Hill
+Description: IE
+*/
+
+
+// UT variables and mixins
+@import "../scss/ut/variables";
+@import "../scss/ut/mixins";
+@import "../scss/bootstrap/mixins";
+
+
+// UT variables and mixins
+@import "../scss/ut/variables";
+@import "../scss/ut/mixins";
+
+// Core variables and mixins
+// @import "../scss/bootstrap/variables";
+@import "../scss/bootstrap/mixins";
+
+// Reset and dependencies
+@import "../scss/bootstrap/normalize";
+@import "../scss/bootstrap/print";
+
+// Core CSS
+@import "../scss/bootstrap/scaffolding";
+@import "../scss/bootstrap/type";
+@import "../scss/bootstrap/code";
+@import "../scss/bootstrap/tables";
+@import "../scss/bootstrap/forms";
+@import "../scss/bootstrap/buttons";
+
+
+// Core UT CSS
+@import "../scss/ut/type";
+@import "../scss/ut/grid";
+@import "../scss/ut/header";
+@import "../scss/ut/offcanvas";
+@import "../scss/ut/wordpress";
+@import "../scss/ut/widgets";
+@import "../scss/ut/pagination";
+@import "../scss/ut/menus";
+@import "../scss/ut/footer";
+@import "../scss/ut/buttons";
+@import "../scss/ut/shortcodes";
+@import "../scss/ut/options";
+@import "../scss/ut/modular-home";
+@import "../scss/ut/alerts";
+@import "../scss/bootstrap/component-animations";
+@import "../scss/bootstrap/input-groups";
+@import "../scss/bootstrap/navs";
+@import "../scss/bootstrap/navbar";
+@import "../scss/bootstrap/pager";
+@import "../scss/bootstrap/labels";
+@import "../scss/bootstrap/responsive-embed";
+@import "../scss/bootstrap/modals";
+@import "../scss/bootstrap/utilities";
+@import "../scss/bootstrap/responsive-utilities";
+@import "../scss/typeahead/typeahead";
+@import "../scss/ut/nivo-slider";
+@import "../scss/ut/nivolight/light.scss";
+@import "../scss/ut/lightbox";
+
+  @media (min-width: $screen-md-min) {
+
+#page {
+  width: $screen-md-min;
+}
+#sitetitle.stuck {
+  width: 700px;
+}
+#megamenu {
+  width: 265px;
+}
+.sidebar-offcanvas.stuck {
+  width: 265px;
+}
+}

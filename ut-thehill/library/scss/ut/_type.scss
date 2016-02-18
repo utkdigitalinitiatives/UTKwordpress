@@ -1,0 +1,138 @@
+h1 {
+  &.entry-title {
+   // font-weight: 400;
+    a {
+      color: $utsmokey;
+    }
+  }
+  &.archive-title, &.page-title {
+    margin: 0;
+    font-style: italic;
+    font-weight: 400;
+    font-size: $font-size-base;
+    color: $utsmokey;
+  }
+}
+header.archive-header, header.page-header {
+  margin-top:  $font-size-base;
+  padding: $font-size-base;
+  background: $gray-lighter;
+}
+
+a:active, a:focus, #megamenu button:active, #megamenu .home_button:active {
+  outline-width: 0px;
+  outline-style: solid;
+  outline-color: $utrock;
+  background: transparentize($utrock, 0.9);
+}
+
+.site-content  {
+ p a, li a, dd a {
+     text-decoration: none;
+       text-shadow: 0 0 #fff, .08em 0 0 #fff, 0 0, -.08em 0 0 #fff;
+       	-webkit-transition: all 0.25s ease-in-out;
+       	   -moz-transition: all 0.25s ease-in-out;
+       	     -o-transition: all 0.25s ease-in-out;
+       	        transition: all 0.25s ease-in-out;
+    background: linear-gradient($utrock, $utrock) center 1.09em no-repeat;
+    background-size: 90%  1px;
+    background-position: center bottom;
+    text-decoration: none;
+   // background-repeat: repeat-x;
+   &:hover {
+    background-size: 100%  1px;
+   }
+   &.btn {
+     background: none;
+   }
+  }
+  .nav {
+   p a, li a, dd a {
+      background-image: none; 
+    }
+  }
+}
+
+body.archive .entry-header, body.search .entry-header {
+  h1 {
+    font-size: $font-size-large;
+   // font-weight: 400;
+    a {
+      color: $link-color;
+    }
+  }
+}
+  
+  
+/*
+.widget {
+  a {
+  text-decoration: none;
+  position: relative;
+  color: $utsmokey;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+
+  border-bottom: 1px solid $utrock;
+}
+}
+a:hover, a:focus {
+  color: #55abad;
+}
+*/
+
+
+/*
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  a {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #333333 2px, #333333 2.5px, rgba(0, 0, 0, 0) 2.5px);
+  }
+}
+a:hover, a:focus {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #55abad 2px, #55abad 3px, rgba(0, 0, 0, 0) 3px);
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  a:hover, a:focus {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #55abad 2px, #55abad 2.5px, rgba(0, 0, 0, 0) 2.5px);
+  }
+}
+*/
+
+
+
+// Icons and interface stuff
+.icon-fa-cal,
+.icon-fa-chevron-right,
+.icon-fa-comment,
+.icon-fa-edit,
+.icon-fa-find,
+.icon-fa-folder,
+.icon-fa-gift,
+.icon-fa-home,
+.icon-fa-tag,
+.icon-fa-chevron-left-white,
+.icon-fa-chevron-left,
+.icon-fa-chevron-down,
+.icon-fa-user {display: inline-block;}
+
+		
+.icon-fa-cal{width: 9px; height: 10px;}
+.icon-fa-chevron-left-white{width: 9px; height: 14px;}
+.icon-fa-chevron-left{width: 9px; height: 14px;}
+.icon-fa-chevron-down{width: 14px; height: 9px;}
+.icon-fa-chevron-right{width: 9px; height: 14px;}
+.icon-fa-comment{width: 11px; height: 9px;}
+.icon-fa-edit{width: 12px; height: 9px;}
+.icon-fa-find{width: 19px; height: 19px;background-size: 17px 17px;}
+.icon-fa-folder{width: 12px; height: 9px;}
+.icon-fa-gift{width: 16px; height: 14px;  background-size: 16px 14px;}
+.icon-fa-home{width: 16px; height: 13px; background-size: 16px 13px;}
+.icon-fa-tag{width: 11px; height: 9px;}
+.icon-fa-user{width: 8px; height: 9px;}
+.icon-fa-user{width: 8px; height: 9px;}
+
+#content table {
+  // border: 1px solid $table-border-color;
+  @extend .table;
+  @extend .table-striped;
+  
+}

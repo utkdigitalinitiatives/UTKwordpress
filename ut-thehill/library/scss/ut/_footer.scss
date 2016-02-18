@@ -1,0 +1,251 @@
+//
+// Footer 
+// --------------------------------------------------
+
+
+// Stuff in the footer
+//
+// Site info
+
+.bg-scr {
+  display: none;
+  @media (min-width: $screen-md) {
+    display: inline-block;
+  }
+}
+
+.sm-scr {
+  @include clearfix();
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+}
+
+.emailList {
+  display: block;
+  @media (min-width: $screen-md) {
+    display: inline;
+  }
+}
+
+#system-indicia {
+  float: left;
+  width: 100%;
+  background: $utsmokey;
+  color: $white;
+  padding:  ($line-height-computed / 2);
+  font-size: $font-size-small;
+  p {
+    padding-left: 30px;
+    margin-bottom: 0;
+    background: url('images/interface/winged-ut.png') no-repeat;
+  }
+  a {
+    color: $white;
+  }
+}
+
+#colophon {
+  padding: 0;
+  color: $utsmokey;
+  float: left;
+  @include grid-unit(12);
+  background-color: $white;
+  border-top: 6px solid $utorange;
+  @include clearfix();
+  @media (min-width: $screen-sm) {
+    width: 100%;
+    margin: 0;
+    }
+  h2 {
+    margin-top: 0;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0px;
+    float: left;
+    @include grid-unit(12);
+    @media (min-width: $screen-sm) {
+      margin-right: $gutter-width * 2;
+      margin-left: 0;
+      width: ($column-width * 4) + (($gutter-width * 2) * 3);
+    }
+  }
+  a.logo {
+    display:inline-block;
+    width: 225px;
+    overflow:hidden;
+    margin:0;
+    padding: 55px 0 0 0;
+    text-indent:-9999px;
+    height:0px !important;
+    background-position: left top;
+    background-size: 200px 48px;
+  }
+  #utk {
+    float: left;
+    @include grid-unit(12);
+    @media (min-width: $screen-xs) {
+       @include grid-unit(6);
+    }
+  }
+  #bobi {
+    float: left;
+    color: $utsmokey;
+    width: 100%;
+    font-size: $font-size-small;
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+  #address {
+    float: left;
+    width: 100%;
+    color: $utsmokey;
+    font-size: $font-size-small;
+
+    //@media (min-width: ($screen-md + 160px)) {
+    //  width: 20%; 
+    //}
+  }
+  #toolkit {
+    float: left;
+    @include grid-unit(12);
+    a {
+      color: $utsmokey;
+      &:hover {
+        color: $utorange;
+      }
+    }
+    @media (min-width: $screen-xs) {
+      @include grid-unit(6);
+      }
+    @media (min-width: $screen-lg) {
+    	margin-right: $gutter-width;
+    	margin-left: 0;
+    	width: ($column-width * 6) + (($gutter-width * 2) * 5);
+    }
+  }
+  #siteinfo {
+    float: left;
+    @include grid-unit(12);
+    // border-bottom: 1px solid lighten($utrock, 20%);
+    // margin-bottom:  $line-height-computed;
+    padding-top: $gutter-width * 2;
+    a {
+      text-decoration: underline;
+      color: $utsmokey;
+    }
+    @media (min-width: $screen-sm) {
+     padding-top: $gutter-width/2;
+     }
+  }
+  #meta-contact, #meta-info {
+    float: left;
+    width: 100%;
+      p {
+        color: $utsmokey;
+        font-size: $font-size-small;
+      }
+    @media (min-width: $screen-sm) {
+      margin-right: $gutter-width * 2;
+      margin-left: 0;
+      width: ($column-width * 6) + (($gutter-width * 2) * 5);
+    }
+    .sitetile {
+      font-size: $font-size-large;
+      line-height: normal;
+    }
+  }
+  #meta-contact {
+    margin-right: 0;
+  }
+  #meta-info {
+      p {
+        color: $utsmokey;
+        font-size: $font-size-base;
+      }
+  }
+  .form-group {
+    width: 80%;
+    float: left;
+    margin-right: 2%;
+    input {
+      width: 100%;
+    }
+  }
+}
+#campus-footer {
+  background: $gray-lighter;
+  float: left;
+  width: 100%;
+  padding-top:  $gutter-width;
+}
+
+#expandedfooter {
+
+  margin: 0;
+//    max-width: $screen-xs;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid lighten($utrock, 20%);
+//  background: lighten($utrock, 30%);
+  @media (min-width: $screen-sm) {
+    background: $white;
+    padding-top:  $gutter-width;
+    @include grid-unit(12);
+  }
+}
+  @media (min-width: $screen-sm) {
+    .expanded-two {
+      .widget-area {
+        margin-right: $gutter-width *2;
+        margin-left: 0;
+        width: ($column-width * 6) + (($gutter-width * 2) * 5);
+      }
+    }
+    .expanded-three {
+      .widget-area {
+          margin-right: $gutter-width * 2;
+          margin-left: 0;
+          width: ($column-width * 4) + (($gutter-width * 2) * 3);
+      }
+    }
+    .expanded-four {
+      .widget-area {
+        	margin-right: $gutter-width * 2;
+          margin-left: 0;
+          width: ($column-width * 3) + (($gutter-width * 2) * 2);
+      }
+    }
+}
+
+
+#linkdrawer {
+  width: 90%;
+  margin: 0 5% 5% 5%;
+  float: left;
+  background: $gray-lighter;
+  padding-top: $gutter-width;
+  .widget-title {
+    margin-top: 0;
+  }
+  .widget-area {
+    float: left;
+    margin: 0 5%;
+    width: 90%;
+    text-align: left;
+  }
+  @media (min-width: $screen-md) {
+    &.linkdrawer-two {
+      .widget-area {
+        @include grid-unit(6);
+      }
+    }
+    &.linkdrawer-three {
+      .widget-area{
+        @include grid-unit(4);
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+.container, #main {
+  margin: 0 auto;
+
+}
+br.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+#page {
+  float: left;
+  width: 100%;
+  @media (min-width: $screen-md-min) {
+    width: 90%;
+    margin: 6px auto 0 auto;
+    float: none;
+    background: $gray-lighter;
+    max-width: 1400px;
+  }
+}
+.site-main {
+  width: 100%;
+  margin: 0 auto;
+  @include clearfix();
+}
+.hentry {
+	margin: 0 auto ($padding-large-vertical *2);
+  // padding: ($line-height-computed / 2) ($line-height-computed / 2) ($line-height-computed);
+  }
+#sidebar {
+ // background: $white;
+  //position: absolute;
+  width: 100%;
+  @media (min-width: $screen-md) {
+    background: transparent;
+    float: left;
+    width: 30%;
+    // position: relative;
+    position: absolute;
+    height: 100%;
+  }
+}
+
+#primary {
+  background: $white;
+  float: left;
+  width: 100%;
+      @include grid-unit(12);
+  @media (min-width: $screen-xs) {
+      // Primary area, give it a little breathing room on small screens;
+      // margins plus width should equal 100%;
+      padding: 0;
+      @include grid-unit(12);
+    }
+  @media (min-width: $screen-md) {
+    // float: left;
+    float: right;
+    width: 70%;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0;
+  }
+
+  #content {
+    position: relative;
+    float: left;
+    @include grid-unit(12);
+    &.home-margin {
+      margin-top:  $gutter-width * 2;
+    }
+    &.affix {
+      @media (min-width: $screen-md) {
+        margin-top: 105px;
+      }
+    }
+    &.nosidebar {
+      // Small Screen With No Sidebar;
+      // margins plus width should equal 100%;
+      @include grid-unit(12);
+    }
+    &.wide {
+      @media (min-width: $screen-md) {
+      margin-left: 6%;
+      margin-right: 6%;
+      margin-top: $gutter-width;
+      width: 88%;
+      }
+    }
+    @media (min-width: $screen-sm) {
+      // Medium Screen with a sidebar;
+      // margins plus width should equal 75%;
+      margin-left: 6%;
+      margin-right: 6%;
+      width: 63%;
+      &.wide {
+        margin-left: 6%;
+        margin-right: 6%;
+        width: 88%;
+        // Medium Screen With No Sidebar or Wide Template;
+        // margins plus width should equal 100%;
+        .entry-header, .entry-content, .entry-summary, .entry-meta {
+          max-width: 100%;
+        }
+      }
+    }
+    @media (min-width: 1420px) {
+        // Big Screen Screen With narrow content, and nice wide margins;
+        // margins plus width should equal 100%;
+      	//margin-right: ($column-width*2 + $gutter-width);
+        //margin-left: ($column-width*2 + $gutter-width);
+        //width: ($column-width * 6 + (($gutter-width * 2) * (5)));
+
+    }
+  }
+}
+#secondary {
+  float: left;
+  @include grid-unit(12);
+  @media (min-width: $screen-md) {
+    @include grid-unit(3);
+  }
+}
+#tertiary {
+    margin: 0;
+//    max-width: $screen-xs;
+    width: 100%;
+    float: left;
+    border-top: 5px solid $utorange;
+    @media (min-width: $screen-sm) {
+      background: none;
+      border: 0;
+      @include grid-unit(3);
+      margin-top: $gutter-width * 2;
+    }
+}
+
+
+
+// -------------------------------------------------------------------
+// Here we go.
+// This is when there is a sidebar
+// which is to say, this is when the content gets narrow to make room for the sidebar
+
+body {
+  @media (min-width: $screen-md) {
+    background: $utrock;
+  }
+}
+

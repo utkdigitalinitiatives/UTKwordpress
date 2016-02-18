@@ -1,0 +1,287 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+.btn, button {
+  background-color: lighten($utrock, 20%);
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+  @include user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    pointer-events: none; // Future-proof disabling of clicks
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+/*
+p a.btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+  background-image: none;
+}
+*/
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: $link-color;
+  font-weight: normal;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+.site-content, .widget  {
+  a, p a, li a, dd a {
+    &.btn {
+      background: $white;
+      border-color: darken($white, 20%);
+      color: $utglobe;
+      text-shadow: none;
+      text-decoration: none;
+      &:hover {
+      	background-color: darken($white, 20%);
+      }
+    }
+
+  // colors that need white type
+  &.btn-smokey, &.btn-valley, &.btn-buckskin, &.btn-globe, &.btn-sunsphere, &.btn-regalia {
+      color: $white;
+  }
+
+    &.btn-globe {
+      @include button-color($utglobe);
+    }
+    &.btn-limestone {
+      @include button-color($utlimestone);
+    }
+    &.btn-sunsphere {
+      @include button-color($utsunsphere);
+    }
+
+    &.btn-smokey {
+      @include button-color($utsmokey);
+    }
+    &.btn-summitt {
+      @include button-color($utsummitt);
+      color: $utsmokey;
+    }
+    &.btn-regalia {
+      @include button-color($utregalia);
+    }
+    &.btn-valley {
+      @include button-color($utvalley);
+    }
+
+
+    &.btn-buckskin {
+      @include button-color($utbuckskin);
+    }
+    &.btn-eureka {
+      @include button-color($uteureka);
+      color: $utsmokey;
+    }
+    // Accessiblity Contrast Adjustments
+
+    &.btn-orange {
+      border-color: $utorange;
+      &:hover {
+        border-color: darken($utorange, 20%);
+      }
+    }
+    &.btn-torch {
+      border-color: $uttorch;
+      &:hover {
+        border-color: darken($uttorch, 20%);
+      }
+    }
+    &.btn-river {
+      border-color: $utriver;
+      &:hover {
+        border-color: darken($utriver, 20%);
+      }
+    }
+    &.btn-leconte {
+      border-color: $utleconte;
+      color: $utleconte;
+      &:hover {
+        border-color: darken($utleconte, 20%);
+      }
+    }
+    &.btn-sunsphere {
+      color: $utsmokey;
+      &:hover {
+        border-color: darken($utorange, 20%);
+      }
+    }
+    &.btn-rock {
+      border-color: $utrock;
+      &:hover {
+        border-color: darken($utrock, 20%);
+      }
+    }
+    &.btn-legacy {
+      border-color: $utlegacy;
+      color: $utsmokey;
+      &:hover {
+        border-color: darken($utlegacy, 20%);
+      }
+    }
+    &.btn-energy {
+      border-color: $utenergy;
+      &:hover {
+        border-color: darken($utenergy, 20%);
+      }
+    }
+    &.btn-switchgrass {
+      border-color: $utswitchgrass;
+      &:hover {
+        border-color: darken($utswitchgrass, 20%);
+      }
+    }
+    &.btn-fountain {
+      border-color: $utfountain;
+      &:hover {
+        border-color: darken($utfountain, 20%);
+      }
+    }
+
+
+    &.btn-orange,&.btn-torch,&.btn-river,&.btn-leconte,&.btn-sunsphere,&.btn-rock,&.btn-legacy,&.btn-energy,&.btn-switchgrass, &.btn-fountain {
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+
+
+
+  }
+}
+
+// Button Big
+
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.7;
+  
+}

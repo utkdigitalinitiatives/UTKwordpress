@@ -1,0 +1,823 @@
+/* Alignment */
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+blockquote.alignleft,
+img.alignleft {
+	margin: 7px 24px 7px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 7px 14px 7px 0;
+}
+
+blockquote.alignright,
+img.alignright {
+	margin: 7px 0 7px 24px;
+}
+
+.wp-caption.alignright {
+	margin: 7px 0 7px 14px;
+}
+
+blockquote.aligncenter,
+img.aligncenter,
+.wp-caption.aligncenter {
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.wp-caption {
+	margin-bottom: 24px;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0;
+}
+.wp-caption-text {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+	font-size: 12px;
+	font-style: italic;
+	line-height: 1.5;
+	margin: 9px 0;
+	padding-right: 10px;
+}
+@media screen and (min-width: $screen-sm) {
+    body  {
+      .site-content {
+        blockquote {
+          &.alignleft, &alignright {
+            width: -webkit-calc(50% + 130px);
+            width:         calc(50% + 130px);
+          }
+        }
+        blockquote.alignleft,img.size-full.alignleft,img.size-large.alignleft,.wp-caption.alignleft {
+          margin-left: -6%;
+        }
+        .alignleft {
+          clear: left;
+        }
+        .alignright {
+          clear: right;
+        }
+        blockquote.alignright,img.size-full.alignright,img.size-large.alignright,.wp-caption.alignright {
+          margin-right: -6%;
+        }
+      &.wide {
+        blockquote.alignright,img.size-full.alignright,img.size-large.alignright,.wp-caption.alignright {
+          margin-right: 0;
+          }
+        blockquote.alignleft,img.size-full.alignleft,img.size-large.alignleft,.wp-caption.alignleft {
+          margin-left: 0;
+          }
+        }
+      } 
+    }
+}
+@media screen and (min-width: $screen-md) {
+    body  {
+      .site-content {
+
+        blockquote.alignleft,img.size-full.alignleft,img.size-large.alignleft,.wp-caption.alignleft {
+          margin-left: 0;
+        }
+
+        blockquote.alignright,img.size-full.alignright,img.size-large.alignright,.wp-caption.alignright {
+          margin-right: 0;
+        }
+      } 
+    }
+}
+@media screen and (min-width: 1420px) {
+    body  {
+      #content {
+         @include grid-unit(6);
+      }
+      .site-content {
+        
+        blockquote.alignleft,img.size-full.alignleft,img.size-large.alignleft,.wp-caption.alignleft {
+          margin-left: -6%;
+        }
+
+        blockquote.alignright,img.size-full.alignright,img.size-large.alignright,.wp-caption.alignright {
+          margin-right: -6%;
+        }
+      &.wide {
+        blockquote.alignright,img.size-full.alignright,img.size-large.alignright,.wp-caption.alignright {
+          margin-right: 0;
+          }
+        blockquote.alignleft,img.size-full.alignleft,img.size-large.alignleft,.wp-caption.alignleft {
+          margin-left: 0;
+          }
+        }
+      } 
+    }
+}
+
+
+
+
+/**
+ * 6.1 Post Thumbnail
+ * -----------------------------------------------------------------------------
+ */
+
+.post-thumbnail {
+	background: #b2b2b2;
+	display: block;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+
+a.post-thumbnail:hover {
+	background-color: #999;
+}
+
+.full-width .post-thumbnail img {
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+/* Responsive images. Fluid images for posts, comments, and widgets */
+
+.comment-content img,
+.entry-content img,
+.entry-summary img,
+#site-header img,
+.widget img,
+.wp-caption {
+	max-width: 100%;
+}
+
+/**
+ * Make sure images with WordPress-added height and width attributes are
+ * scaled correctly.
+ */
+
+.comment-content img[height],
+.entry-content img,
+.entry-summary img,
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"],
+#site-header img {
+	height: auto;
+}
+
+img.size-full,
+img.size-large,
+.wp-post-image,
+.post-thumbnail img {
+	height: auto;
+	max-width: 100%;
+}
+img.size-large,
+.wp-post-image,
+.post-thumbnail img {
+	height: auto;
+	max-width: 100%;
+  @media screen and (min-width: $screen-sm) {
+    max-width: 112%;
+    margin-left: -6%;
+    margin-right: -6%;
+  }
+  @media screen and (min-width: $screen-md) {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @media screen and (min-width: 1420px) {
+    max-width: 112%;
+    margin-left: -6%;
+    margin-right: -6%;
+  }
+}
+.post-thumbnail img, .entry-thumbnail img {
+	max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: $gutter-width;
+}
+
+
+
+
+/* Make sure embeds and iframes fit their containers */
+
+embed,
+iframe,
+object,
+video {
+	margin-bottom: 24px;
+	max-width: 100%;
+}
+
+p > embed,
+p > iframe,
+p > object,
+span > embed,
+span > iframe,
+span > object {
+	margin-bottom: 0;
+}
+
+
+/**
+ * 6.1 Various Layout Elements
+ * -----------------------------------------------------------------------------
+ */
+
+.post-navigation {
+  margin-bottom: ($font-size-large * 4);
+}
+
+
+/**
+ * 6.1 Meta info
+ * -----------------------------------------------------------------------------
+ */
+
+
+body.page-template-template-nosidebar {
+   .entry-header,
+  .entry-content,
+  .entry-summary,
+  .entry-meta {
+    	max-width: $screen-xs;
+  } 
+}
+
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-meta {
+	margin: 0 auto;
+
+	width: 100%;
+	//max-width: $screen-xs;
+	&.wide {
+  	@include grid-unit(12);
+    border: 0;
+    float: left;
+	}
+}
+.entry-content {
+  	// font-family: $font-family-serif;
+}
+.entry-header {
+ // margin-bottom: $navbar-height;
+}
+.entry-meta {
+    font-style: italic;
+    font-size: $font-size-small;
+    color: $gray-darker;
+    
+  > span {
+    margin-right: 20px;
+  }
+  a {
+    font-size: $font-size-small;
+    color: $link-color;
+  }
+}
+
+
+/**
+ * 6.2 Special Type
+ * -----------------------------------------------------------------------------
+ */
+ 
+ 
+ 
+/**
+ * 6.2 POST FORMATS
+ * -----------------------------------------------------------------------------
+ */
+
+ 
+/**
+ * 6.5 Gallery
+ * -----------------------------------------------------------------------------
+ */
+ 
+ // This coding is taken directly from twentyfourteen. Sorry, it works. Let's not over think this.
+
+.gallery {
+	margin-bottom: 20px;
+}
+
+.gallery-item {
+	float: left;
+	margin: 0 4px 4px 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.gallery-columns-1 .gallery-item {
+	max-width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 48%;
+	max-width: -webkit-calc(50% - 4px);
+	max-width:         calc(50% - 4px);
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 32%;
+	max-width: -webkit-calc(33.3% - 4px);
+	max-width:         calc(33.3% - 4px);
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 23%;
+	max-width: -webkit-calc(25% - 4px);
+	max-width:         calc(25% - 4px);
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 19%;
+	max-width: -webkit-calc(20% - 4px);
+	max-width:         calc(20% - 4px);
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 15%;
+	max-width: -webkit-calc(16.7% - 4px);
+	max-width:         calc(16.7% - 4px);
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 13%;
+	max-width: -webkit-calc(14.28% - 4px);
+	max-width:         calc(14.28% - 4px);
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 11%;
+	max-width: -webkit-calc(12.5% - 4px);
+	max-width:         calc(12.5% - 4px);
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 9%;
+	max-width: -webkit-calc(11.1% - 4px);
+	max-width:         calc(11.1% - 4px);
+}
+
+.gallery-columns-1 .gallery-item:nth-of-type(1n),
+.gallery-columns-2 .gallery-item:nth-of-type(2n),
+.gallery-columns-3 .gallery-item:nth-of-type(3n),
+.gallery-columns-4 .gallery-item:nth-of-type(4n),
+.gallery-columns-5 .gallery-item:nth-of-type(5n),
+.gallery-columns-6 .gallery-item:nth-of-type(6n),
+.gallery-columns-7 .gallery-item:nth-of-type(7n),
+.gallery-columns-8 .gallery-item:nth-of-type(8n),
+.gallery-columns-9 .gallery-item:nth-of-type(9n) {
+	margin-right: 0;
+}
+
+.gallery-caption {
+	background-color: $utsmokey;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+	color: $white;
+	font-size: 12px;
+	line-height: 1.5;
+	margin: 0;
+	max-height: 50%;
+	opacity: 0;
+	padding: 6px 8px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+	width: 100%;
+}
+
+.gallery-caption:before {
+	content: "";
+	height: 100%;
+	min-height: 49px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.gallery-item:hover .gallery-caption {
+	opacity: 1;
+}
+
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+
+
+
+/**
+ * 6.10 Contributor Page
+ * -----------------------------------------------------------------------------
+ */
+
+.contributor {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing:      border-box;
+	padding: 48px 10px;
+}
+
+.contributor:first-of-type {
+	padding-top: 24px;
+}
+
+.contributor-info {
+	margin: 0 auto;
+	max-width: 474px;
+}
+
+.contributor-avatar {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	float: left;
+	margin: 0 30px 20px 0;
+	padding: 2px;
+}
+
+.contributor-name {
+	font-size: 16px;
+	font-weight: 900;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.contributor-bio a {
+	text-decoration: underline;
+}
+
+.contributor-bio a:hover {
+	text-decoration: none;
+}
+
+.contributor-posts-link {
+	display: inline-block;
+	line-height: normal;
+	padding: 10px 30px;
+}
+
+.contributor-posts-link:before {
+	content: "\f443";
+}
+
+
+
+
+
+/**
+ * 6.14 Comments
+ * -----------------------------------------------------------------------------
+ */
+ 
+
+.comments-area {
+	margin: $font-size-large auto;
+	max-width: $screen-xs;
+	padding: 0 10px;
+}
+
+.comment-reply-title,
+.comments-title {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.comment-list {
+	list-style: none;
+	margin: 0 0 48px 0;
+}
+
+.comment-author {
+	font-size: $font-size-base;
+}
+
+.comment-list .reply,
+.comment-metadata {
+	font-size: $font-size-small;
+	line-height: 2;
+	text-transform: uppercase;
+}
+
+.comment-list .reply {
+	margin-top: $font-size-base;
+}
+
+.comment-author .fn {
+	font-weight: bold;
+}
+
+.comment-author a {
+	color: $utsmokey;
+}
+
+.comment-list .trackback a,
+.comment-list .pingback a,
+.comment-metadata a {
+	color: $utrock;
+	font-style: italic;
+}
+
+.comment-author a:hover,
+.comment-list .pingback a:hover,
+.comment-list .trackback a:hover,
+.comment-metadata a:hover {
+	color: $utorange;
+}
+
+.comment-list article,
+.comment-list .pingback,
+.comment-list .trackback {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	margin-bottom: ($font-size-base * 2);
+	padding: ($font-size-base * 2);
+}
+
+.comment-list > li:first-child > article,
+.comment-list > .pingback:first-child,
+.comment-list > .trackback:first-child {
+	border-top: 0;
+}
+
+.comment-author {
+	position: relative;
+}
+
+.comment-author .avatar {
+	border: 1px solid $utrock;
+	height: ($font-size-base * 2);
+	padding: 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: ($font-size-base * 2);
+}
+
+.bypostauthor > article .fn:before {
+	content: "\f408";
+	margin: 0 2px 0 -2px;
+	position: relative;
+	top: -1px;
+}
+
+.says {
+	display: none;
+}
+
+.comment-author,
+.comment-awaiting-moderation,
+.comment-content,
+.comment-list .reply,
+.comment-metadata {
+	padding-left: 30px;
+}
+
+.comment-edit-link {
+	margin-left: 10px;
+}
+
+.comment-edit-link:before {
+	content: "\f044";
+	font: normal normal normal 14px/1 FontAwesome;
+}
+
+.comment-reply-link:before,
+.comment-reply-login:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f112";
+	margin-right: 2px;
+}
+
+.comment-content {
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	word-wrap: break-word;
+}
+
+.comment-content ul,
+.comment-content ol {
+	margin: 0 0 24px 22px;
+}
+
+.comment-content li > ul,
+.comment-content li > ol {
+	margin-bottom: 0;
+}
+
+.comment-content > :last-child {
+	margin-bottom: 0;
+}
+
+.comment-list .children {
+	list-style: none;
+	margin-left: $font-size-base;
+}
+
+.comment-respond {
+	margin-bottom: ($font-size-base * 2);
+	padding: 0;
+}
+
+.comment .comment-respond {
+	margin-top: ($font-size-base * 2);
+}
+
+.comment-respond h3 {
+	margin-top: 0;
+	margin-bottom: ($font-size-base * 2);
+}
+
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.no-comments,
+.form-allowed-tags,
+.form-allowed-tags code {
+	color: $utsmokey;
+}
+
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as {
+	font-size: $font-size-base;
+}
+
+.no-comments {
+	font-size: $font-size-large;
+	line-height: 1.5;
+	margin-top: $font-size-base;
+	text-transform: uppercase;
+}
+
+.comment-form label {
+	display: block;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
+	width: 100%;
+}
+
+.form-allowed-tags,
+.form-allowed-tags code {
+	font-size: $font-size-small;
+	line-height: 1.5;
+}
+
+.required {
+	color: $uttorch;
+}
+
+.comment-reply-title small a {
+	color: $utsmokey;
+	float: right;
+//	height: ($font-size-base * 2);
+	overflow: hidden;
+//	width: ($font-size-base * 2);
+}
+
+.comment-reply-title small a:hover {
+	color: $utorange;
+}
+
+.comment-reply-title small a:before {
+	content: "\f00d";
+	color: $uttorch;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: $font-size-large;
+}
+
+.comment-navigation {
+	font-size: $font-size-small;
+	line-height: 2;
+	margin-bottom: ($font-size-base * 4);
+	text-transform: uppercase;
+}
+
+.comment-navigation .nav-next,
+.comment-navigation .nav-previous {
+	display: inline-block;
+}
+
+.comment-navigation .nav-previous a {
+	margin-right: 10px;
+}
+
+#comment-nav-above {
+	margin-top: ($font-size-base * 3);
+	margin-bottom: 0;
+}
+
+#commentform {
+  // target the TEXT type, so not make the submit button weird
+
+  input[type="text"], textarea {
+    display: block;
+    width: 100%;
+    height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $input-color;
+    background-color: $input-bg;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+  
+    // Customize the `:focus` state to imitate native WebKit styles.
+    @include form-control-focus();
+  
+    // Placeholder
+    @include placeholder();
+
+  }
+  input[type="submit"] {
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+    @include user-select(none);
+    background: $utrock;
+    color: $white;
+
+    &,
+    &:active,
+    &.active {
+      &:focus {
+        @include tab-focus();
+      }
+    }
+  
+    &:hover,
+    &:focus {
+      color: $btn-default-color;
+      text-decoration: none;
+      background: $utorange;
+    }
+  
+    &:active,
+    &.active {
+      outline: 0;
+      background-image: none;
+    }
+  }
+  .comment-form-author, .comment-form-email, .comment-form-url, .comment-form-comment {
+      display: inline-table;
+      vertical-align: middle;
+      width: 100%;
+      float: left;
+      clear: both;
+      margin-bottom: $font-size-base;
+        label {
+          display: inline-block;
+          max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+          margin-bottom: 5px;
+          font-weight: bold;
+          width: 30%;
+          float: left;
+        }
+        #url, #email, #author {
+          float: left;
+          width: 70%;
+        }
+    }
+    #comment {
+      float: left;
+      height: auto;
+      margin-bottom: $font-size-base;
+    }
+}

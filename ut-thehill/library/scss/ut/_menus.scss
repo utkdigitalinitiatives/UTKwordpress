@@ -1,0 +1,383 @@
+//
+// Header 
+// --------------------------------------------------
+
+// Main Menus
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+#megamenu {
+  float: left;
+  width: 100%;
+  display: block;
+  h3 {
+    font-size: $font-size-base;
+    border-bottom: 1px solid $utsmokey;
+    padding: 8px 0;
+    margin: 0 0 0 15px;
+  }
+  button,.home_button  {
+    border: 0;
+    line-height: 1;
+    color: $utsmokey;
+    background: $white;
+    height: $navbar-height;
+    border-bottom: 1px  solid lighten($utrock, 20%);
+    &:focus {
+      outline-width: 0px;
+      outline-style: solid;
+      outline-color: $utrock;
+      background: transparentize($utrock, 0.9);
+    }
+    @media (min-width: $screen-md) {
+      background: $gray-lighter;
+    }
+    &.menu-back {
+      height: $navbar-height * 1.66;
+      float: left;
+      margin-bottom: $navbar-height / 2;
+    }
+    &:active {
+      background: none;
+      box-shadow: none;
+    }
+  }
+  .home_button {
+    padding-top: $font-size-base;
+  }
+  li {
+    &.current-menu-item, &.current_page_item, &.current-page-ancestor, &.current-menu-ancestor, &.current-menu-parent, &.current-page-parent, &.current_page_parent, &.current_page_ancestor {
+      > a {
+        font-weight: bold;
+      }
+    }
+    &.current-top-menu-item {
+      button {
+        font-weight: bold;
+      }
+    }
+  }
+  ul.mainnav, ul.menu {
+    padding-left: 0;
+  }
+  ul {
+    width: 100%;
+    margin-bottom: 0;
+    padding-left: 1em;
+    list-style: none;
+    @include clearfix();
+    > li {
+      width: 100%;
+      // background: $white;
+      // &.current_page_item > a, &.current_page_ancestor > a, &.current-menu-item > a, &.current-menu-ancestor > a {
+      //   color: $utsmokey;
+      //   font-weight: bold;
+      // }
+     > a, > button {
+        position: relative;
+        display: block;
+        padding: $nav-link-padding;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          }
+        }
+      }
+    }
+  button {
+    // these are the menu buttons
+    width: 100%;
+    text-align: left;
+  }
+  .megamenu-sub {
+    position: fixed;
+    z-index: $zindex-megamenusub;
+    overflow: auto;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    background: $white;
+    border-left: 2px solid $utrock;  
+    &.active {
+      right: 0;
+    }
+    @media (min-width: $screen-md) {
+      top: 75px;
+    }
+  }
+  @media (min-width: $screen-md) {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+
+
+  // Single Menu
+  &.singlemenu {
+    a {
+     // background: aqua;
+      padding-top: 15px;
+      border: 0;
+      line-height: 1;
+      background: $white;
+      color: $utsmokey;
+      height: $navbar-height;
+       @media (min-width: $screen-md) {
+          background: $gray-lighter;
+          border-bottom: 1px  solid lighten($utrock, 25%);
+        }
+    }
+  }
+}
+#megamenu .open .megamenu-sub {
+    right: 0; /* makes it display when you click */
+  }
+
+
+// And now lets reset everything for the big screen.
+// ==========================================================
+
+
+@media (min-width: $screen-md) {
+  #megamenu {
+    border-top: 0;
+    float: left;
+    margin-bottom: 2em;
+
+      .inner {
+        // We need this inner div to align the columns of links with the headline
+        float: left;
+        width: 95%;
+        margin-left: 2.5%;
+      }
+    }
+  button.menu-back {
+    display: none; /* We do not need to see the back button*/
+  }
+}
+
+
+
+
+// And now for the big screen FLYOUT
+// ==========================================================
+
+
+@media (min-width: $screen-md) {
+  
+  #megamenu {
+    h3 {
+      margin: 0 3em 0 2.5%;  
+      font-size: 1.6em;
+    }
+    .megamenu-sub {
+      display: none; /* hide all sub menus from view */
+      position: absolute;
+      top: 0px;
+      left: 100%;
+      right: auto;
+      z-index: $zindex-megamenusub;
+      float: left;
+      height: auto;
+      border: 1px solid lighten($utrock, 20%);
+      border-right: 0;
+      background: $white;
+      padding-top: 12px;
+      @include box-shadow(3px 3px 2px $utrock);
+      a {
+        padding:  8px 30px 8px 0;
+        color: $utsmokey;
+        border-bottom: 1px solid lighten($utrock, 20%);
+        &:hover {
+          color: $utorange;
+        }
+      }
+      ul {
+        border-top: 1px solid $gray-lighter;
+        position: relative;
+      }
+      .menu {
+        width: 25%;
+        margin: 10px 0;
+        .menu-item {
+          &:last-child {
+            border: 0;
+          }
+          .sub-menu {
+            display: none;
+            position: absolute;
+            top: -1px;
+            padding-left: 0;
+            background: $white;
+
+          }
+        }
+      }
+    }
+
+    // Change styles when list item is open
+    .open {
+      .list-item-button {
+        z-index: $zindex-megamenusub-button;
+        width: 106%;
+        margin-top: -1px;
+        border-left: 2px solid $gray-lighter;
+        border-top: 2px solid lighten($utrock, 20%);
+        border-bottom: 3px solid lighten($utrock, 20%);
+        background: white;
+      }
+      .megamenu-sub {
+        display: block;
+      }
+      .menu-back {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 1px;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        background: $utorange;
+        color: $white;
+        text-transform: uppercase;
+        font-size: $font-size-small;
+        text-align: center;
+        &.btn {
+          border-radius: 0;
+        }
+        .back {
+          display: none;
+        }
+      }
+    }
+    .menu-item-has-children {
+      background-image: url("images/interface/bg-subitem.svg"); // if there are sub items, indicate it with an arrow
+      background-position: center right;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+
+// And now for the Sideways Dropdowns
+// ==========================================================
+// Keep in mind, much of the styling may be coming from styles above. We're only rewriting what we need here.
+@media (min-width: $screen-md) {
+  body.dropnav #megamenu {
+    .inner {
+        // We need this inner div to align the columns of links with the headline
+        margin-left: 2%;
+      }
+
+    // Add some clears to make each li part of the vertical structure
+    .mainnav > li {
+      clear: both;
+      position: relative;
+    }
+
+    // let's hide some things we don't need for the dropdowns.
+    .open {
+      .icon-fa-chevron-right {
+        display: none;
+      }
+     .menu-back, h3 {
+          display: none;
+        }
+     .list-item-button {
+        color: $utsmokey;
+        border: 0;
+        background: lighten($utrock, 20%);
+      }
+    }
+    .menu-item-has-children {
+      position: relative;
+      background-image: url("images/interface/bg-subitem.svg"); // if there are sub items, indicate it with an arrow
+    }
+    .megamenu-sub {
+      top: 0;
+      left: 103.5%;
+      background: transparent;
+      height: auto;
+      min-height: 1px;
+      width: 80%;
+      border: none;
+      overflow: visible;
+      padding-top: 0;
+      z-index: $zindex-megamenusub-drop;
+      @include box-shadow(0 0 0 transparent);
+      a {
+        border-left: 1px solid $gray-lighter;
+        border-bottom: 0;
+        padding-left: 10px;
+        &:hover {
+          color: $utorange;
+        }
+
+      }
+      ul {
+        border-top: 0;
+        position: relative;
+      }
+      .menu {
+        width: 69%;
+        margin: 0;
+        border: 1px solid  lighten($utrock, 20%);
+        border-left: 0;
+        background: #fff;
+        .menu-item {
+          .sub-menu {
+            top: 0;
+            left: 100% !important; // important to override the menu-aim inline-styles
+            height: auto !important; // important to override the menu-aim inline-styles
+            border: 1px solid  $gray-lighter;
+          }
+        }
+      }
+    }
+    // Here is the little carat arrow dealy
+     .megamenu-sub ul {
+      @include box-shadow(2px 2px 2px $utrock);
+       &:before, &:after {
+      	right: 100%;
+      	top: $font-size-base*1.5;
+      	border: solid transparent;
+      	content: " ";
+      	height: 0;
+      	width: 0;
+      	position: absolute;
+      	pointer-events: none;
+      }
+      &:before {
+      	// border-color: $utsmokey;
+      	border-right-color:  lighten($utrock, 20%);
+      	border-width: 9px;
+      	margin-top: -9px;
+      }
+      &:after {
+      	border-color: rgba(255, 255, 255, 0);
+      	border-right-color: $white;
+      	border-width: 8px;
+      	margin-top: -8px;
+      }
+    }
+  }
+}
+
+  #giving {
+    border-bottom: 1px  solid lighten($utrock, 25%);
+    a {
+      float: left;
+      width: 100%;
+      background: $white;
+      border-bottom: 1px  solid lighten($utrock, 25%);
+      color: $utsmokey;
+    }
+    a:hover {
+      color: $utorange;
+    }
+    .fa {
+      margin-top: $font-size-base/2.5;
+    }
+  }

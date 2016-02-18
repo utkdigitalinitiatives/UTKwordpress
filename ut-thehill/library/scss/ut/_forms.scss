@@ -1,0 +1,135 @@
+// Most form styling is handled by the default Bootstrap forms.
+// This is the special stuff.
+#page .gform_wrapper input[type="radio"] {
+
+  margin: 4px 1px 1px; // 3
+}
+
+// Gravity forms specific
+#page { // Wrapping this in an ID helps it overide the default stylesheet
+  .gform_wrapper {
+    padding-top: 0;
+    @include box-shadow(3px 3px 2px lighten($utrock,40%));
+    .gfield {
+      margin-bottom: $padding-large-vertical;
+    }
+    .gfield_checkbox {
+      br {
+        display: none;
+      }
+    }
+    // Progress Bars
+    .gf_progressbar {
+      @extend .progress;
+      background-image: none;
+    }
+    .gf_progressbar_percentage {
+      @extend .progress-bar;
+      background-image: none;
+      text-shadow: none;
+
+    //  &.percentbar_blue {
+    //    background-color: $utglobe;
+    //  }
+    }
+    // Submit Button
+    input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
+      @extend .btn;
+    }
+
+    // Errors and Warnings
+    
+    .gfield_error {
+      @extend .box-light;
+      background: $white;
+      .gfield_label {
+        color: $uttorch;
+      }
+    }
+    li.gfield_error {
+      label {
+        color: $uttorch;
+      }
+    }
+    div.validation_error, .validation_message, .gfield_required {
+      color: $uttorch;
+      font-weight: normal;
+    }
+  }  
+}
+
+body {
+  &.torch {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $uttorch;
+    }
+  }
+  &.smokey {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utsmokey;
+    }
+  }
+  &.valley {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utvalley;
+    }
+  }
+  &.globe {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utglobe;
+    }
+  }
+  &.sunsphere {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utsunsphere;
+    }
+  }
+  &.river {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utriver;
+    }
+  }
+  &.leconte {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utleconte;
+    }
+  }
+  &.rock {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utrock;
+    }
+  }
+  &.regalia {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utregalia;
+    }
+  }
+  &.summitt {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utsummitt;
+    }
+  }
+  &.legacy {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utlegacy;
+    }
+  }
+  &.switchgrass {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utswitchgrass;
+    }
+  }
+  &.eureka {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $uteureka;
+    }
+  }
+  &.energy {
+    #page .gform_wrapper .gf_progressbar_percentage {
+      background-color: $utenergy;
+    }
+  }
+}
+.help-block {
+  color: lighten($utsmokey, 10%);
+}

@@ -1,0 +1,177 @@
+/*!
+Theme Name: The Hill
+Theme URI: http://communications.utk.edu/resources/web/wptemplates.php
+Author: The UT Web Team
+Author URI: http://communications.utk.edu
+Description: In 2014, the wind blew a different direction. We looked to the Hill. The pages are easy to find.
+Version: 1.0.2
+
+*/
+
+// UT variables and mixins
+@import "library/scss/ut/variables";
+@import "library/scss/ut/mixins";
+
+// Core variables and mixins
+// @import "library/scss/bootstrap/variables";
+@import "library/scss/bootstrap/mixins";
+
+// Reset and dependencies
+@import "library/scss/bootstrap/normalize";
+@import "library/scss/ut/print";
+//@import "library/scss/bootstrap/glyphicons";
+
+// Core CSS
+@import "library/scss/bootstrap/scaffolding";
+@import "library/scss/bootstrap/type";
+@import "library/scss/bootstrap/code";
+// @import "library/scss/bootstrap/grid";
+@import "library/scss/bootstrap/tables";
+@import "library/scss/bootstrap/forms";
+
+
+// Core UT CSS
+@import "library/scss/ut/type";
+@import "library/scss/bootstrap/buttons";
+@import "library/scss/ut/grid";
+@import "library/scss/ut/header";
+@import "library/scss/ut/offcanvas";
+@import "library/scss/ut/wordpress";
+@import "library/scss/ut/widgets";
+@import "library/scss/ut/pagination";
+@import "library/scss/ut/menus";
+@import "library/scss/ut/footer";
+@import "library/scss/ut/buttons";
+@import "library/scss/ut/shortcodes";
+@import "library/scss/ut/options";
+@import "library/scss/ut/forms";
+@import "library/scss/ut/modular-home";
+@import "library/scss/ut/webapp";
+//@import "library/scss/ut/sm-core-css";
+
+//Alerts
+@import "library/scss/ut/alerts";
+
+
+// Components
+@import "library/scss/bootstrap/component-animations";
+// @import "library/scss/bootstrap/dropdowns";
+@import "library/scss/bootstrap/button-groups";
+@import "library/scss/bootstrap/input-groups";
+@import "library/scss/bootstrap/navs";
+@import "library/scss/bootstrap/navbar";
+// @import "library/scss/bootstrap/breadcrumbs";
+// @import "library/scss/bootstrap/pagination";
+@import "library/scss/bootstrap/pager";
+@import "library/scss/bootstrap/labels";
+// @import "library/scss/bootstrap/badges";
+// @import "library/scss/bootstrap/jumbotron";
+// @import "library/scss/bootstrap/thumbnails";
+// @import "library/scss/bootstrap/alerts";
+ @import "library/scss/bootstrap/progress-bars";
+// @import "library/scss/bootstrap/media";
+// @import "library/scss/bootstrap/list-group";
+ @import "library/scss/bootstrap/panels";
+@import "library/scss/bootstrap/responsive-embed";
+// @import "library/scss/bootstrap/wells";
+// @import "library/scss/bootstrap/close";
+@import "library/scss/ut/icons";
+
+
+
+
+// Components w/ JavaScript
+@import "library/scss/bootstrap/modals";
+// @import "library/scss/bootstrap/tooltip";
+// @import "library/scss/bootstrap/popovers";
+// @import "library/scss/bootstrap/carousel";
+
+// Utility classes
+@import "library/scss/bootstrap/utilities";
+@import "library/scss/bootstrap/responsive-utilities";
+
+// Typeahead
+@import "library/scss/typeahead/typeahead";
+
+
+// Nivo
+@import "library/scss/ut/nivo-slider";
+// @import "library/scss/ut/nivobar/bar.scss";
+// @import "library/scss/ut/nivodark/dark.scss";
+// @import "library/scss/ut/nivodefault/default.scss";
+//@import "library/scss/ut/nivolight/light.scss";
+
+
+
+
+// @import "library/bower_components/ekko-lightbox/dist/ekko-lightbox.min.css";
+@import "library/scss/ut/lightbox.scss";
+
+
+
+
+//                    TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+//                    TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+//                    TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+//                    TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+//                    TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+//                    TTTTTTTT     TTTTTTTTTTTTT     TTTTTTTTT
+//                    TTTTTT         TTTTTTTTT         TTTTTTT
+//                    TTTTT          TTTTTTTTT          TTTTTT
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                   TTTTTTTTT                
+//                                  TTTTTTTTTTT               
+//                                 TTTTTTTTTTTTT              
+//                             TTTTTTTTTTTTTTTTTTTTT          
+//                             TTTTTTTTTTTTTTTTTTTTT          
+//                             TTTTTTTTTTTTTTTTTTTTT          
+//                             TTTTTTTTTTTTTTTTTTTTT  
+
+//                             ___                    
+//                            -   ---___- ,,          
+//                               (' ||    ||          
+//                              ((  ||    ||/\\  _-_  
+//                             ((   ||    || || || \\ 
+//                              (( //     || || ||/   
+//                                -____-  \\ |/ \\,/  
+//                                          _/        
+//                                                    
+//   _ _    _ ,                                                                 
+//  - - /  - -                                       ,                       /\ 
+//    ('||  ||         ' ;                       '  ||                      ||  
+//   (( ||--||  \\/\\ \\ \\/\  _-_  ,._-_  _-_, \\ =||= '\\/\\        /'\\ =||= 
+//   (( ||--||  || || || || | || \\  ||   ||_.  ||  ||   || ;'       || ||  ||  
+//   (( /   ||  || || || || | ||/    ||    ~ || ||  ||   ||/         || ||  ||  
+//     -___-\\, \\ \\ \\ \\/  \\,/   \\,  ,-_-  \\  \\,  |/          \\,/   \\, 
+//                                                      (                       
+//                                                       -_-                    
+//         ___                                                           
+//        -   ---___-                                                    
+//           (' ||                                                       
+//          ((  ||     _-_  \\/\\ \\/\\  _-_   _-_,  _-_,  _-_   _-_     
+//         ((   ||    || \\ || || || || || \\ ||_.  ||_.  || \\ || \\    
+//          (( //     ||/   || || || || ||/    ~ ||  ~ || ||/   ||/      
+//            -____-  \\,/  \\ \\ \\ \\ \\,/  ,-_-  ,-_-  \\,/  \\,/  <> 
+//                                                                     ) 
+//                                                                       
+//                                                                
+//                _-_-,                               ,, ,,       
+//                  // ,                ,     ;     ' || ||       
+//                  ||/\\   \\/\\  /'\\ \\ /` \\/\ \\ || ||  _-_  
+//                 ~|| <    || || || ||  \\   || | || || || || \\ 
+//                  ||/\\   || || || ||  /\\  || | || || || ||/   
+//                 _-__,\\, \\ \\ \\,/  /  \; \\/  \\ \\ \\ \\,/  
+//                                                                
+//                                                                
+//
+//
+//                                               

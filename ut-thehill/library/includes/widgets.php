@@ -120,7 +120,7 @@ register_widget('UT_Highlight');
 
 function unregister_default_wp_widgets() {
     unregister_widget('WP_Widget_Meta');
-    unregister_widget('WP_Widget_Search');
+//    unregister_widget('WP_Widget_Search');
     unregister_widget('WP_Widget_Calendar');
 }
 add_action('widgets_init', 'unregister_default_wp_widgets', 1);
